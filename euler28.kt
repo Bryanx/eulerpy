@@ -19,10 +19,8 @@ What is the sum of the numbers on the diagonals in a 1001 by 1001 spiral formed 
 
  */
 fun main() {
-    var result = (3..1001 step 2).mapIndexed { i, v ->
-        4 * (v * v) - (i + 1) * 12
-    }.sum() + 1
-    println(result)
+    (3..1001 step 2).mapIndexed { i, v -> 4 * (v * v) - (i + 1) * 12 }
+            .also { print(it.sum() + 1) }
 }
 
 // Previous solution refactored to above:
