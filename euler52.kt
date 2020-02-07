@@ -6,9 +6,8 @@
  */
 
 fun main() {
-    val numbers = listOf(2,3,4,5,6)
     (1..200000)
-            .first { i -> numbers.all { containsSameDigits(i, i * it) } }
+            .first { i -> (2..6).all { containsSameDigits(i, i * it) } }
             .also(::print)
 }
 
