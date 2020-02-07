@@ -6,8 +6,7 @@
  */
 
 fun main() {
-    (1..200000)
-            .first { i -> (2..6).all { i.sorted() == (i * it).sorted() } }
+    (1..200000).first { i -> (2..6).all { i.sorted() == (i * it).sorted() } }
             .also(::print)
 }
 
