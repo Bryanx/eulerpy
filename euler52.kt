@@ -7,12 +7,8 @@
 
 fun main() {
     (1..200000)
-            .first { i -> (2..6).all { containsSameDigits(i, i * it) } }
+            .first { i -> (2..6).all { i.sorted() == (i * it).sorted() } }
             .also(::print)
 }
 
-fun containsSameDigits(n1: Int, n2: Int): Boolean {
-    val s1 = n1.toString()
-    val s2 = n2.toString()
-    return s1.length == s2.length && s1.all { s2.contains(it) }
-}
+private fun Int.sorted() = this.toString().toCharArray().sorted()
