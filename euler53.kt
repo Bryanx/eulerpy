@@ -2,8 +2,12 @@ import java.math.BigDecimal
 
 /**
  *
- * It can be seen that the number, 125874, and its double, 251748, contain exactly the same digits, but in a different order.
- * Find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.
+ * There are exactly ten ways of selecting three from five, 12345:
+* 123, 124, 125, 134, 135, 145, 234, 235, 245, and 345
+* In combinatorics, we use the notation, (5 choose 3)=10.
+* In general, (n choose r)=n!r!/(n−r)!, where r≤n, n!=n×(n−1)×...×3×2×1, and 0!=1.
+* It is not until n=23, that a value exceeds one-million: (23 choose 10)=1144066.
+* How many, not necessarily distinct, values of (n choose r) for 1≤n≤100, are greater than one-million?
  *
  */
 
